@@ -16,13 +16,13 @@ This repository contains 2 scripts, namely
 
 After copying the script to your linux/mac environment run the script as 
 
-----
+---
  ./<script_name> <query.log>
-----
+---
 
 for example
 
-----
+---
  ./parseq_41x.sh logs/query.log
----- 
+--- 
  
