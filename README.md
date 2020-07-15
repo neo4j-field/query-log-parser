@@ -14,8 +14,10 @@ A bash script to quickly analyze either a 3.5 or 4.1 Neo4j query log and report 
 
 This repository contains 2 scripts, namely
 
+````
  parseq_3x_40x.sh   <-- to be used against either 3.x or 4.0.x query.log
  parseq_41x.sh      <-- to be used against a 4.1.x query.log
+````
 
 After copying the script to your linux/mac environment run the script as 
 
