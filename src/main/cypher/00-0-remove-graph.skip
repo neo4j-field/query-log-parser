@@ -1,0 +1,21 @@
+// ==================================
+// Remove all nodes and relationships
+// ==================================
+// for large graphs: consider removing the database on the file system while Neo4j is shut down
+
+RETURN apoc.date.format(datetime().epochSeconds, 's', "yyyy-MM-dd'T'HH:mm:ssZ", 'Europe/Berlin') + ' [INFO] 00-0.1 - Deleting relationships' AS ` `;
+CALL apoc.periodic.iterate('CYPHER runtime=slotted MATCH ()-[r]-() RETURN r', 'DELETE r', {batchSize: 50000});
+RETURN apoc.date.format(datetime().epochSeconds, 's', "yyyy-MM-dd'T'HH:mm:ssZ", 'Europe/Berlin') + ' [INFO] 00-0.1 done' AS ` `;
+
+RETURN apoc.date.format(datetime().epochSeconds, 's', "yyyy-MM-dd'T'HH:mm:ssZ", 'Europe/Berlin') + ' [INFO] 00-0.2 - Deleting nodes' AS ` `;
+CALL apoc.periodic.iterate('CYPHER runtime=slotted MATCH (n) RETURN n', 'DELETE n', {batchSize: 50000});
+RETURN apoc.date.format(datetime().epochSeconds, 's', "yyyy-MM-dd'T'HH:mm:ssZ", 'Europe/Berlin') + ' [INFO] 00-0.2 done' AS ` `;
+
+
+// ==================================
+// Delete indexes/constraints
+// ==================================
+
+RETURN apoc.date.format(datetime().epochSeconds, 's', "yyyy-MM-dd'T'HH:mm:ssZ", 'Europe/Berlin') + ' [INFO] 00-0.3 - Deleting indexes and constraints' AS ` `;
+CALL apoc.schema.assert({}, {});
+RETURN apoc.date.format(datetime().epochSeconds, 's', "yyyy-MM-dd'T'HH:mm:ssZ", 'Europe/Berlin') + ' [INFO] 00-0.3 done' AS ` `;
