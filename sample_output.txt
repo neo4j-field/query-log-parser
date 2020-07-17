@@ -1,0 +1,87 @@
+First Query Reported at: 2020-05-28 22:53:06.660+0000
+ Last Query Reported at: 2020-05-29 14:28:57.571+0000
+        Duration of Log:  15 hours, 35 minutes and 51 seconds.
+
+*******EXECUTION:*******
+Total # of Completed Queries: 98
+       Total Duration (msec): 2494
+   Avg of all Queries (msec): 25.449
+
+Top 10 Longest Queries longest on top and leading line number:
+Note: Queries which are multi-line will only report first line of query !!!
+
+
+line:651        2020-05-28 22:53:09.777+0000 INFO  id:994368 - 1354 ms: (planning: 2, waiting: 1028) - 115211 page hits, 0 page faults - bolt-session   bolt    neo4j-java/4.0.1-979f102fbfd27e6393f672da8c7d59f6fabbbe0e         client/172.30.3.243:46922       server/172.30.3.187:7687>       neoprod.db - neo4j - UNWIND $entities as entityProps
+line:654        2020-05-28 22:53:09.976+0000 INFO  id:994369 - 1069 ms: (planning: 1, waiting: 1067) - 548 page hits, 0 page faults - bolt-session      bolt    neo4j-java/4.0.1-979f102fbfd27e6393f672da8c7d59f6fabbbe0e         client/172.30.3.71:51458        server/172.30.3.187:7687>       neoprod.db - neo4j - UNWIND $entities as entityProps
+line:698        2020-05-29 14:27:59.748+0000 INFO  id:994390 - 21 ms: (planning: 1, waiting: 0) - 1 page hits, 0 page faults - bolt-session     bolt    neo4j-javascript/0.0.0-devclient/172.16.10.64:52326       server/172.30.3.187:7687>       system - neo4j - CALL dbms.procedures YIELD name - {} - {}
+line:708        2020-05-29 14:28:00.262+0000 INFO  id:994395 - 9 ms: (planning: 1, waiting: 0) - 1 page hits, 0 page faults - bolt-session      bolt    neo4j-javascript/0.0.0-devclient/172.16.10.64:52332       server/172.30.3.187:7687>       system - neo4j - CALL dbms.listConfig() - {} - {}
+line:6  2020-05-28 22:53:06.666+0000 INFO  id:994316 - 5 ms: (planning: 5, waiting: 0) - 96 page hits, 0 page faults - bolt-session     bolt    neo4j-java/4.0.1-979f102fbfd27e6393f672da8c7d59f6fabbbe0e         client/172.30.3.186:50296       server/172.30.3.187:7687>       neoprod.db - neo4j - UNWIND $annotations as a
+line:658        2020-05-29 14:27:07.271+0000 INFO  id:994370 - 4 ms: (planning: 3, waiting: 0) - 0 page hits, 0 page faults - bolt-session      bolt    neo4j-javascript/0.0.0-devclient/172.16.10.64:52090       server/172.30.3.187:7687>       system - neo4j - CALL dbms.routing.getRoutingTable($context, $database) - {context: {}, database: <null>} - {}
+line:374        2020-05-28 22:53:07.869+0000 INFO  id:994347 - 3 ms: (planning: 0, waiting: 0) - 1586 page hits, 0 page faults - bolt-session   bolt    neo4j-java/4.0.1-979f102fbfd27e6393f672da8c7d59f6fabbbe0e         client/172.30.3.71:50310        server/172.30.3.187:7687>       neoprod.db - neo4j - UNWIND $annotations as a
+line:354        2020-05-28 22:53:07.849+0000 INFO  id:994345 - 3 ms: (planning: 0, waiting: 0) - 1596 page hits, 0 page faults - bolt-session   bolt    neo4j-java/4.0.1-979f102fbfd27e6393f672da8c7d59f6fabbbe0e         client/172.30.3.71:50310        server/172.30.3.187:7687>       neoprod.db - neo4j - UNWIND $annotations as a
+line:344        2020-05-28 22:53:07.838+0000 INFO  id:994344 - 3 ms: (planning: 0, waiting: 0) - 1242 page hits, 0 page faults - bolt-session   bolt    neo4j-java/4.0.1-979f102fbfd27e6393f672da8c7d59f6fabbbe0e         client/172.30.3.71:50284        server/172.30.3.187:7687>       neoprod.db - neo4j - UNWIND $annotations as a
+line:156        2020-05-28 22:53:07.079+0000 INFO  id:994331 - 2 ms: (planning: 0, waiting: 0) - 978 page hits, 0 page faults - bolt-session    bolt    neo4j-java/4.0.1-979f102fbfd27e6393f672da8c7d59f6fabbbe0e         client/172.30.3.71:50310        server/172.30.3.187:7687>       neoprod.db - neo4j - UNWIND $annotations as a
+
+
+*******PLANNING:*******
+Total # of Completed Queries: 98
+Total Duration (msec): 14
+Avg of all Queries (msec): 0.142857
+Number of Queries NOT Planned: 93    94.898%
+
+line:6  2020-05-28 22:53:06.666+0000 INFO  id:994316 - 5 ms: (planning: 5, waiting: 0) - 96 page hits, 0 page faults - bolt-session     bolt    neo4j-java/4.0.1-979f102fbfd27e6393f672da8c7d59f6fabbbe0e         client/172.30.3.186:50296       server/172.30.3.187:7687>       neoprod.db - neo4j - UNWIND $annotations as a
+line:658        2020-05-29 14:27:07.271+0000 INFO  id:994370 - 4 ms: (planning: 3, waiting: 0) - 0 page hits, 0 page faults - bolt-session      bolt    neo4j-javascript/0.0.0-devclient/172.16.10.64:52090       server/172.30.3.187:7687>       system - neo4j - CALL dbms.routing.getRoutingTable($context, $database) - {context: {}, database: <null>} - {}
+line:651        2020-05-28 22:53:09.777+0000 INFO  id:994368 - 1354 ms: (planning: 2, waiting: 1028) - 115211 page hits, 0 page faults - bolt-session   bolt    neo4j-java/4.0.1-979f102fbfd27e6393f672da8c7d59f6fabbbe0e         client/172.30.3.243:46922       server/172.30.3.187:7687>       neoprod.db - neo4j - UNWIND $entities as entityProps
+line:708        2020-05-29 14:28:00.262+0000 INFO  id:994395 - 9 ms: (planning: 1, waiting: 0) - 1 page hits, 0 page faults - bolt-session      bolt    neo4j-javascript/0.0.0-devclient/172.16.10.64:52332       server/172.30.3.187:7687>       system - neo4j - CALL dbms.listConfig() - {} - {}
+line:698        2020-05-29 14:27:59.748+0000 INFO  id:994390 - 21 ms: (planning: 1, waiting: 0) - 1 page hits, 0 page faults - bolt-session     bolt    neo4j-javascript/0.0.0-devclient/172.16.10.64:52326       server/172.30.3.187:7687>       system - neo4j - CALL dbms.procedures YIELD name - {} - {}
+line:688        2020-05-29 14:27:59.464+0000 INFO  id:994385 - 1 ms: (planning: 1, waiting: 0) - 0 page hits, 0 page faults - bolt-session      bolt    neo4j-javascript/0.0.0-devclient/172.16.10.64:52326       server/172.30.3.187:7687>       system - neo4j - CALL dbms.routing.getRoutingTable($context, $database) - {context: {}, database: 'system'} - {}
+line:654        2020-05-28 22:53:09.976+0000 INFO  id:994369 - 1069 ms: (planning: 1, waiting: 1067) - 548 page hits, 0 page faults - bolt-session      bolt    neo4j-java/4.0.1-979f102fbfd27e6393f672da8c7d59f6fabbbe0e         client/172.30.3.71:51458        server/172.30.3.187:7687>       neoprod.db - neo4j - UNWIND $entities as entityProps
+line:96 2020-05-28 22:53:06.902+0000 INFO  id:994325 - 0 ms: (planning: 0, waiting: 0) - 336 page hits, 0 page faults - bolt-session    bolt    neo4j-java/4.0.1-979f102fbfd27e6393f672da8c7d59f6fabbbe0e         client/172.30.3.186:50296       server/172.30.3.187:7687>       neoprod.db - neo4j - UNWIND $annotations as a
+line:86 2020-05-28 22:53:06.894+0000 INFO  id:994324 - 0 ms: (planning: 0, waiting: 0) - 272 page hits, 0 page faults - bolt-session    bolt    neo4j-java/4.0.1-979f102fbfd27e6393f672da8c7d59f6fabbbe0e         client/172.30.3.186:48516       server/172.30.3.187:7687>       neoprod.db - neo4j - UNWIND $annotations as a
+line:76 2020-05-28 22:53:06.883+0000 INFO  id:994323 - 1 ms: (planning: 0, waiting: 0) - 544 page hits, 0 page faults - bolt-session    bolt    neo4j-java/4.0.1-979f102fbfd27e6393f672da8c7d59f6fabbbe0e         client/172.30.3.186:50296       server/172.30.3.187:7687>       neoprod.db - neo4j - UNWIND $annotations as a
+
+
+*******CPU:*******
+Total # of Completed Queries:
+Total Duration (msec):
+awk: cmd. line:10: (FILENAME=query.log FNR=746) fatal: division by zero attempted
+
+
+*******WAITING:*******
+Total # of Completed Queries: 98
+Total Duration (msec): 2095
+Avg of all Queries (msec): 21.3776
+
+line:654        2020-05-28 22:53:09.976+0000 INFO  id:994369 - 1069 ms: (planning: 1, waiting: 1067) - 548 page hits, 0 page faults - bolt-session      bolt    neo4j-java/4.0.1-979f102fbfd27e6393f672da8c7d59f6fabbbe0e         client/172.30.3.71:51458        server/172.30.3.187:7687>       neoprod.db - neo4j - UNWIND $entities as entityProps
+line:651        2020-05-28 22:53:09.777+0000 INFO  id:994368 - 1354 ms: (planning: 2, waiting: 1028) - 115211 page hits, 0 page faults - bolt-session   bolt    neo4j-java/4.0.1-979f102fbfd27e6393f672da8c7d59f6fabbbe0e         client/172.30.3.243:46922       server/172.30.3.187:7687>       neoprod.db - neo4j - UNWIND $entities as entityProps
+line:96 2020-05-28 22:53:06.902+0000 INFO  id:994325 - 0 ms: (planning: 0, waiting: 0) - 336 page hits, 0 page faults - bolt-session    bolt    neo4j-java/4.0.1-979f102fbfd27e6393f672da8c7d59f6fabbbe0e         client/172.30.3.186:50296       server/172.30.3.187:7687>       neoprod.db - neo4j - UNWIND $annotations as a
+line:86 2020-05-28 22:53:06.894+0000 INFO  id:994324 - 0 ms: (planning: 0, waiting: 0) - 272 page hits, 0 page faults - bolt-session    bolt    neo4j-java/4.0.1-979f102fbfd27e6393f672da8c7d59f6fabbbe0e         client/172.30.3.186:48516       server/172.30.3.187:7687>       neoprod.db - neo4j - UNWIND $annotations as a
+line:76 2020-05-28 22:53:06.883+0000 INFO  id:994323 - 1 ms: (planning: 0, waiting: 0) - 544 page hits, 0 page faults - bolt-session    bolt    neo4j-java/4.0.1-979f102fbfd27e6393f672da8c7d59f6fabbbe0e         client/172.30.3.186:50296       server/172.30.3.187:7687>       neoprod.db - neo4j - UNWIND $annotations as a
+line:746        2020-05-29 14:28:57.571+0000 INFO  id:994414 - 0 ms: (planning: 0, waiting: 0) - 0 page hits, 0 page faults - bolt-session      bolt    neo4j-javascript/0.0.0-devclient/172.16.10.64:52331       server/172.30.3.187:7687>       system - neo4j - CALL dbms.showCurrentUser() - {} - {}
+line:744        2020-05-29 14:28:57.398+0000 INFO  id:994413 - 1 ms: (planning: 0, waiting: 0) - 0 page hits, 0 page faults - bolt-session      bolt    neo4j-javascript/0.0.0-devclient/172.16.10.64:52332       server/172.30.3.187:7687>       system - neo4j - CALL dbms.listConfig() - {} - {}
+line:742        2020-05-29 14:28:56.976+0000 INFO  id:994412 - 0 ms: (planning: 0, waiting: 0) - 4 page hits, 0 page faults - bolt-session      bolt    neo4j-javascript/0.0.0-devclient/172.16.10.64:52332       server/172.30.3.187:7687>       system - neo4j - SHOW DATABASES - {} - {}
+line:740        2020-05-29 14:28:49.526+0000 INFO  id:994411 - 0 ms: (planning: 0, waiting: 0) - 0 page hits, 0 page faults - bolt-session      bolt    neo4j-javascript/0.0.0-devclient/172.16.10.64:52550       server/172.30.3.187:7687>       system - neo4j - CALL dbms.routing.getRoutingTable($context, $database) - {context: {}, database: 'neoprod.db'} - {}
+line:738        2020-05-29 14:28:48.771+0000 INFO  id:994410 - 0 ms: (planning: 0, waiting: 0) - 0 page hits, 0 page faults - bolt-session      bolt    neo4j-javascript/0.0.0-devclient/172.16.10.64:52549       server/172.30.3.187:7687>       system - neo4j - CALL dbms.routing.getRoutingTable($context, $database) - {context: {}, database: 'neoprod.db'} - {}
+
+
+
+Number of Neo4j Starts detected: 0     (if > 1 results may be questionable)
+Number of queries started: 99
+Number of queries compleed: 98
+Number of queries reporting ERROR: 2
+Queries which started but did not complete ( these may include queries which syntactically errored )
+  * Additionally queries which started in query.log.1 may be completed in query.log and this script does not
+    span multiple logs
+  * Also since we are simply matching on a query id, and to which this can be re-cycled/re-used when Neo4j
+    restarts, if multiple restarts reported above then accuracy is in question.
+
+Started Query Id                                 Completed Query Id:
+994341                                                        <
+
+
+To further analyze above query ids one can run from the linux prompt `grep " id:<id> " query.log`
+for example `grep -n " id:7 " query.log
+
+
+
+Files left behind include startedQ.7342, completedQ.7342, errorQ.7342
