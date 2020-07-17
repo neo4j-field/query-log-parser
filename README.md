@@ -30,7 +30,7 @@ for example
 ````
  ./parseq_41x.sh logs/query.log
 ````
-Example output can be found at link:./sample_output.txt[sample_output.txt]
+Example output can be found at https://github.com/neo-technology-field/query-log-parser/blob/master/sample_output.txt
 
 What can these output tell you
   1. How many queries they run during the query.log
