@@ -69,6 +69,10 @@ awk '$3== "INFO" {print "line:" NR "\t" $0}' $logfile | sort -n -r -k 10 | head 
           awk '$3== "INFO" &&$10== "waiting:" {count++;  total=total+$11 } $11== "0)" {nowait++;} END{print "\n\t\t\t*******WAITING:******* \n Total # of Completed Queries: " count "\n        Total Duration (msec): " total "\n    Avg of all Queries (msec): " total/count "\nNumber of Queries NOT Waiting: " nowait "      " (nowait/count)*100 "%\n" }' $logfile
 awk '$3== "INFO" {print "line:" NR "\t" $0}' $logfile | sort -n -r -k 12 | head -10
      fi
+          #Histogram
+          printf "\n\n\n"
+          printf "Historgram of Completed Queries per hour (and TZ from query.log file)\n"
+          grep INFO $logfile | grep -v "Query started" | awk -F"[ :]" '{printf "%s%02d\n",$1" "$2 ":",60*int($3/60)}' | awk -F '|' '{a[$1] += 1} END{ n=asorti(a, sorted) ;  for ( i=1; i<=n; i++) print sorted[i], a[sorted[i]] }'
 else
     # logfile does not exist
     printf "\n$logfile does not exist\n"
