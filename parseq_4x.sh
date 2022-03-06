@@ -141,8 +141,19 @@ printf "\n\n\n"
 printf "Files left behind include $startFile, $completedFile, $errorFile \n\n\n"
 }
 
+histogram() {
+  logfile=$1
+  printf "\n\n\n"
+  printf "Historgram of Completed Queries per hour (and TZ from query.log file)\n"
+  grep INFO $logfile | grep -v "Query started" | awk -F"[ :]" '{printf "%s%02d\n",$1" "$2 ":",60*int($3/60)}' | awk -F '|' '{a[$1] += 1} END{ n=asorti(a, sorted) ;  for ( i=1; i<=n; i++) print sorted[i], a[sorted[i]] }'
+}
+
+
+
+
 summary $1
 planning $1
 cpu $1
 waiting $1
 missing $1
+histogram $1
