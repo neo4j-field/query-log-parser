@@ -64,3 +64,11 @@ When the Query completes we would expect a query.log line similar to
 
 The ability to detect a query started but not completed is simply to find 2 rows similar to above.  If there is a Neo4j restart in the middle of the query.log then
 detection might not be perfect.
+
+### Requirements
+
+On MacOS to properly execute the script you need to install `gakw`, you can execute the following command if you have brew installed: 
+
+```
+brew install gawk
+```
