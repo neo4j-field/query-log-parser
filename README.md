@@ -16,7 +16,7 @@ This repository contains 2 scripts, namely
 
 ````
  parseq_3x_40x.sh   <-- to be used against either 3.x query.log
- parseq_41x.sh      <-- to be used against a 4.x query.log
+ parseq_4x.sh      <-- to be used against a 4.x query.log
 ````
 
 After copying the script to your linux/mac environment run the script as 
@@ -28,7 +28,7 @@ After copying the script to your linux/mac environment run the script as
 for example
 
 ````
- ./parseq_41x.sh logs/query.log
+ ./parseq_4x.sh logs/query.log
 ````
 Example output can be found at https://github.com/neo-technology-field/query-log-parser/blob/master/sample_output.txt
 
