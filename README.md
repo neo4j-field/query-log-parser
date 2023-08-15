@@ -67,7 +67,7 @@ detection might not be perfect.
 
 ### Requirements
 
-On MacOS to properly execute the script you need to install `gakw`, you can execute the following command if you have brew installed: 
+On MacOS to properly execute the script you need to install `gawk`, you can execute the following command if you have brew installed: 
 
 ```
 brew install gawk
